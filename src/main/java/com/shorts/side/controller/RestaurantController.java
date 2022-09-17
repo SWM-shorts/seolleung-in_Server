@@ -18,4 +18,9 @@ public class RestaurantController {
         return restaurantService.getRestaurant();
     }
 
+    @GetMapping("/restaurant/random")
+    public RestaurantDto readPlaces() {
+        return restaurantService.getRandomRestaurant();
+    }
+
 }

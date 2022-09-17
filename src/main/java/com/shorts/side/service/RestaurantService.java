@@ -17,4 +17,7 @@ public class RestaurantService {
     public List<RestaurantDto> getRestaurant() {
         return restaurantRepository.getRestaurant();
     }
+    public RestaurantDto getRandomRestaurant() {
+        return restaurantRepository.getRandomRestaurant();
+    }
 }
