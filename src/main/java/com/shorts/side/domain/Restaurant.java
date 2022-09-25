@@ -41,5 +41,19 @@ public class Restaurant {
     @Column(name="mentor_class")
     private int mentorClass;
 
+    private String MON_business_hour;
+    private String MON_break_hour;
+    private String TUE_business_hour;
+    private String TUE_break_hour;
+    private String WED_business_hour;
+    private String WED_break_hour;
+    private String THU_business_hour;
+    private String THU_break_hour;
+    private String FRI_business_hour;
+    private String FRI_break_hour;
+    private String SAT_business_hour;
+    private String SAT_break_hour;
+    private String SUN_business_hour;
+    private String SUN_break_hour;
 
 }

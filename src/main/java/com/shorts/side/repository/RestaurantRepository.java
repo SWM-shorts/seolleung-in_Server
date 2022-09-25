@@ -33,6 +33,23 @@ public class RestaurantRepository {
 
         return result;
     }
+    public List<RestaurantDto> getRestaurantDate(String date) {
+
+        List<RestaurantDto> result = new ArrayList<>();
+
+        List<Restaurant> restaurants =
+                em.createQuery("SELECT a FROM Restaurant a", Restaurant.class).getResultList();
+
+        restaurants.forEach(restaurant -> {
+            try {
+                result.add(new RestaurantDto(restaurant));
+            } catch (NullPointerException e) {
+                return;
+            }
+        });
+
+        return result;
+    }
     public RestaurantDto getRandomRestaurant() {
 
 //        AtomicReference<RestaurantDto> result = new AtomicReference<>(new RestaurantDto());
